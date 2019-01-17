@@ -1,7 +1,7 @@
 {
-  "name": "nebulosa-web",
+  "name": "portafolio-pablo",
   "version": "1.0.0",
-  "description": "Pagina web de la startup nebulosa web",
+  "description": "Portafolio de Pablo Rincones",
   "main": "./src/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
@@ -9,14 +9,12 @@
     "build": "webpack --mode production"
   },
   "keywords": [
-    "nebulosa",
-    "startup",
-    "pagina",
+    "portafolio",
     "web",
-    "desarrollo",
-    "web",
-    "dise;o",
-    "web"
+    "Front-end",
+    "Back-end",
+    "desarrollo web",
+    "dise;o web"
   ],
   "author": "Pablo Rincones <pablorincones95@gmail.com>",
   "license": "MIT",
