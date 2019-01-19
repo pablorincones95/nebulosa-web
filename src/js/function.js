@@ -11,6 +11,15 @@ const toggleNav = () => {
     header.classList.toggle('is-active');
     main.classList.toggle('is-active');
   });
+
+  d.addEventListener('click', e => {
+    if (e.target.matches('a[href="#"]')) {
+      e.preventDefault();
+      headerBtn.classList.remove('is-active');
+    header.classList.remove('is-active');
+    main.classList.remove('is-active');
+    }
+  });
 }
 
 export default toggleNav;

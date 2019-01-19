@@ -46,6 +46,7 @@
     width: var(--logo-width);
     height: var(--logo-height);
     background-color: var(--second-color);
+    border-radius: 50%;
 
     @include mq(m) { display: none; }
 
@@ -65,4 +66,8 @@
       }
     }
   }
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+  background-color: var(--link-color);
 }
