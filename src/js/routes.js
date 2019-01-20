@@ -21,6 +21,10 @@ import registerProject from './projects/register_project';
 import showProjects from './projects/show_projects';
 import deleteProjects from './projects/delete_projects';
 
+/***** imagenes para about *****/
+import aboutImg1 from '../img/fifi.jpg';
+import aboutImg2 from '../img/amor-de-ninos.jpg';
+
 const routes = () => {
   const d = document,
     main = d.querySelector('.Main');
@@ -40,6 +44,7 @@ const routes = () => {
       showProjects();
     } else if (e.target.matches('#about')) {
       main.innerHTML = tplAbout;
+      d.querySelector('.About-header').innerHTML =` <img src="${aboutImg1}">  <img src="${aboutImg2}"> `
     } else if (e.target.matches('#service')) {
       main.innerHTML = tplService;
     } else if (e.target.matches('#contact')) {
@@ -48,8 +53,8 @@ const routes = () => {
       firebase.auth().onAuthStateChanged(user => {
         if (user) {
           main.innerHTML = tplAdmin;
-          //d.querySelector('.Admin-name').textContent = user.displayName;
-          //d.querySelector('.Admin-avatar').src = user.photoURL;
+          d.querySelector('.Admin-name').textContent = user.displayName;
+          d.querySelector('.Admin-avatar').src = user.photoURL;
           registerProject();
           showProjects();
           console.log(user)
@@ -65,6 +70,12 @@ const routes = () => {
       deleteProjects(e.target.dataset.photo, e.target.dataset.id);
     }
   });
+
+  d.addEventListener('change', e => {
+    if (e.target.matches('input[type="file"]')) {
+      d.querySelector('.Form-uploader input[type="text"]').value = e.target.value;
+    }
+  })
 }
 
 export default routes;

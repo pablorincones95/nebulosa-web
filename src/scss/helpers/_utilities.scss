@@ -24,3 +24,17 @@
 }
 
 .u-none { display: none; }
+
+
+.u-btn {
+  margin: 1rem auto;
+  padding: .5rem 1rem;
+  outline: 0;
+  border: 0;
+  border-radius: .25rem;
+  background-color: var(--alternate-modal-color);
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover { background-color: var(--alternate-color); }
+}
