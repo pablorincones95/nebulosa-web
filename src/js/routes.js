@@ -3,7 +3,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
 import 'firebase/storage';
-import './config';
+import './config/config';
 
 /* ***** Autenticacion ***** */
 import { signIn, signOut } from './auth';
