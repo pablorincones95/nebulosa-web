@@ -11,6 +11,9 @@ function figureTemplate(key, {uid, title, img}) {
     <figcaption>
     <span>${title}</span>
     <i class="fas fa-trash" data-id="${key}" data-photo="${img}"></i>
+    <p>Description</p>
+    <p>Tecnologias:</p>
+    <a>Ver</a>
     </figcaption>
   `
 }

@@ -1,6 +1,6 @@
 .Menu {
   margin-bottom: 2rem;
-  text-align: right;
+  text-align: center;
   font-size: 5vw;
 
   @include mq(m) {
@@ -22,14 +22,16 @@
   a {
     padding-right: .5rem;
     display: block;
+    border-radius: 1rem;
 
     &:hover {
       color: var(--main-color);
-      background-color: var(--alternate-color);
+      background-color: var(--second-color);
+      border-radius: 1rem;
 
       @include mq(m) { background-color: transparent; }
 
-      @include mq(l) { background-color: var(--alternate-color); }
+      @include mq(l) { background-color: var(--second-color); }
     }
   }
 }

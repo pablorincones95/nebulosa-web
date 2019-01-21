@@ -1,7 +1,7 @@
 .Title {
   margin: 2rem 0;
   font-size: 4vw;
-  color: var(--main-color);
+  color: var(--white);
 
   @include mq(m) {
     grid-area: title;
@@ -12,9 +12,9 @@
   }
 
   @include mq(l) {
-    margin: 2rem 0;
+    margin: 1rem 0;
     text-align: initial;
-    flex-grow: 1;
+    //flex-grow: 1;
   }
 
   * {

@@ -1,15 +1,16 @@
 /* ********** Custom Properties ********** */
 :root {
-  --main-font: 'Space Mono', monospace;
+  --main-font: 'Raleway';
   --alternate-font: sans-serif;
   --font-size: 16px;
   --line-height: 1.6;
 
-  --main-color: #FFF;
+  --white: #FFFFFF;
+  --main-color: #000014;
   --main-modal-color: rgb(255, 255, 255, .75);
-  --second-color: #000;
+  --second-color: #FF00FF;
   --second-modal-color: rgba(0, 0, 0, .75);
-  --alternate-color: #39B54A;
+  --alternate-color: #00FFFF;
   --alternate-modal-color: rgb(57, 181, 74, .75);
 
   --bg-color: var(--main-color);
@@ -21,8 +22,8 @@
   --text-color: #242424;
   --title-color: #333;
 
-  --link-color: var(--alternate-color);
-  --link-hover-color: var(--alternate-modal-color);
+  --link-color: var(--second-color);
+  --link-hover-color: var(--alternate-color);
 
   --max-width: 1200px;
   --header-height: 5rem;

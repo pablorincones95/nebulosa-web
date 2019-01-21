@@ -8,8 +8,9 @@
   width: 50%;
   height: 100vh;
   overflow-y: auto;
-  background-color: var(--second-color);
+  background-color: var(--main-color);
   transition: margin-left .3s ease;
+  border-radius: 0 2.5rem 2.5rem 0;
 
   &.is-active { margin-left: 0; }
 
@@ -31,10 +32,11 @@
   @include mq(l) {
     position: fixed;
     padding: 1rem;
-    width: 30%;
+    width: 25%;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
   }
 
   &-btn {
@@ -45,8 +47,7 @@
     display: flex;
     width: var(--logo-width);
     height: var(--logo-height);
-    background-color: var(--second-color);
-    border-radius: 50%;
+    background-color: var(--main-color);
 
     @include mq(m) { display: none; }
 
@@ -66,8 +67,4 @@
       }
     }
   }
-}
-
-.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
-  background-color: var(--link-color);
 }
