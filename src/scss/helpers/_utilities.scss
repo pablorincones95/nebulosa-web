@@ -22,15 +22,18 @@
 .u-none { display: none; }
 
 .u-btn {
+  font-size: 1.1rem;
   margin: 1rem auto;
-  padding: .5rem 1rem;
+  padding: .84rem 1.5rem;
   outline: 0;
   border: 0;
-  border-radius: .25rem;
-  background-color: var(--alternate-modal-color);
+  border-radius: 10em;
+  color: var(--second-color);
+  background-color: var(--main-color);
   cursor: pointer;
+  box-shadow: var(--shadow-1);
   transition: all .3s ease;
 
-  &:hover { background-color: var(--alternate-color); }
+  &:hover { color: var(--main-color); background-color: var(--second-color); box-shadow: var(--shadow); }
 }
 

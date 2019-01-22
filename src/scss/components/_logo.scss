@@ -10,6 +10,7 @@
  // background-color: var(--alternate-color);
 
  img {
+  box-shadow: var(--shadow-img);
    border-radius: 50%;
    @include mq(l) {
      width: 150px;

@@ -1,17 +1,25 @@
 .Form {
   * { margin-bottom: .5rem; }
+  text-align: center;
 
   input[type="text"],
   input[type="email"],
   textarea {
-    padding: .5rem;
+    padding: 1rem;
     width: 100%;
     display: block;
-    border: thin solid var(--alternate-color);
-    border-radius: .25rem;
+    border-radius: 10em;
+    box-shadow: var(--shadow-1);
+    border: 0;
     font-size: 1rem;
     font-family: var(--main-font);
     transition: all .3s ease-out;
+    margin-bottom: 1rem;
+    &:focus {
+      outline: 0;
+      border: 0;
+      box-shadow: var(--shadow);
+    }
   }
 
   input[type="submit"] {
@@ -66,5 +74,8 @@
       cursor: pointer;
       opacity: 0;
      }
+  }
+  legend {
+    font-size: 3rem;
   }
 }

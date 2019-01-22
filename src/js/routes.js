@@ -22,8 +22,7 @@ import showProjects from './projects/show_projects';
 import deleteProjects from './projects/delete_projects';
 
 /***** imagenes para about *****/
-import aboutImg1 from '../img/fifi.jpg';
-import aboutImg2 from '../img/amor-de-ninos.jpg';
+import astronauta from '../img/astronauta.svg';
 
 const routes = () => {
   const d = document,
@@ -44,7 +43,7 @@ const routes = () => {
       showProjects();
     } else if (e.target.matches('#about')) {
       main.innerHTML = tplAbout;
-      d.querySelector('.About-header').innerHTML =` <img src="${aboutImg1}">  <img src="${aboutImg2}"> `
+      d.querySelector('.About-header').innerHTML =` <img src="${astronauta}"> `
     } else if (e.target.matches('#service')) {
       main.innerHTML = tplService;
     } else if (e.target.matches('#contact')) {
