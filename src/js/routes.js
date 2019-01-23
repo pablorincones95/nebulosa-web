@@ -65,7 +65,8 @@ const routes = () => {
       signIn();
     } else if (e.target.matches('#logout')) {
       signOut()
-    } else if (e.target.matches('.fa-trash')) {
+    } else if (e.target.matches('#delete')) {
+      console.log('trash')
       deleteProjects(e.target.dataset.photo, e.target.dataset.id);
     }
   });

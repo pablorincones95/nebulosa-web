@@ -5,15 +5,16 @@ import 'firebase/database';
 import 'firebase/storage';
 import '../config/config';
 
-function figureTemplate(key, {uid, title, img}) {
+function figureTemplate(key, {uid, title, img, category, url}) {
   return `
     <img src="${img}" alt="${title}">
     <figcaption>
-    <span>${title}</span>
-    <i class="fas fa-trash" data-id="${key}" data-photo="${img}"></i>
-    <p>Description</p>
-    <p>Tecnologias:</p>
-    <a>Ver</a>
+    <div>
+      <p class="title">${title}</p>
+      <i id="delete" class="fas fa-trash" data-id="${key}" data-photo="${img}"></i>
+    </div>
+    <p class="description">${category}</p>
+    <a href="${url}" target="_blank" class="u-btn">Ver mas</a>
     </figcaption>
   `
 }
@@ -27,6 +28,7 @@ export default function showProjects() {
     let figure = d.createElement('figure');
 
     figure.id = data.key;
+    figure.classList.add('masonry-brick')
     figure.innerHTML = figureTemplate(data.key, data.val());
     projects.insertAdjacentElement('afterbegin', figure);
   })

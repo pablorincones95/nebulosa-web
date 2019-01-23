@@ -7,13 +7,15 @@ import '../config/config';
 
 const d = document;
 
-function registerInDB(uid, title, img) {
+function registerInDB(uid, title, img, category, url) {
   let db = firebase.database().ref().child('projects');
 
   db.push({
     uid,
     title,
     img,
+    category,
+    url
   });
 }
 
@@ -38,11 +40,13 @@ function uploadImg(img) {
   }, () => {
     const imgUrl = imgRef.child(imgName),
       uid = firebase.auth().currentUser.uid,
-      title = d.querySelector('input[name="title"]').value;
+      title = d.querySelector('input[name="title"]').value,
+      category = d.querySelector('input[name="category"]').value,
+      url = d.querySelector('input[name="url"]').value,
 
     uploader = null;
 
-    imgUrl.getDownloadURL().then(url => registerInDB(uid, title, url)).then(() => {
+    imgUrl.getDownloadURL().then(urlImg => registerInDB(uid, title, urlImg, category, url)).then(() => {
       progressBar.value = 0;
       progressAdvance.textContent = null;
       progressBar.classList.add('u-none');

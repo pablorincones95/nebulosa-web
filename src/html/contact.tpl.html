@@ -1,12 +1,13 @@
 <section class="Contact">
-  <form method="POST" class="Form">
+  <form id="contact-form" method="POST" class="Form">
     <legend class="u-message">Contactame</legend>
     <input type="text" name="name" placeholder="Escribe tu nombre" title="tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
       required>
     <input type="email" name="email" placeholder="Escribe tu email" title="tu email" pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$"
       required>
     <input type="text" name="subject" title="asunto a tratar" placeholder="Asunto a tratar" required>
-    <textarea name="comments" title="tus comentarios" placeholder="Escribe tus comentarios" required></textarea>
-    <input type="submit" value="Enviar">
+    <textarea name="mesagge" title="tus comentarios" placeholder="Escribe tu mensaje" required></textarea>
+    <button class="u-btn" type="submit" id="enviar"><b>Enviar mensaje</b></button>
+    <p class="u-message"></p>
   </form>
 </section>
